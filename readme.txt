@@ -64,3 +64,7 @@ npm run build
 npm i -g serve
 
 serve -s dist
+
+git init
+git add .
+git commit -m "project"
