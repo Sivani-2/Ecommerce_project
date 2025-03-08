@@ -68,3 +68,7 @@ serve -s dist
 git init
 git add .
 git commit -m "project"
+Create repository in github and type
+git branch -M main
+git remote add origin <link of git repo>
+git push -u origin main
