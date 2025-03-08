@@ -72,3 +72,25 @@ Create repository in github and type
 git branch -M main
 git remote add origin <link of git repo>
 git push -u origin main
+
+Go to render 
+get started with GitHub
+new-> web service-> continue with GitHub
+->select the repository required
+-> Keep everything same till Region
+Root Directory: backend
+Build command: npm install
+Start command: npm start
+Set environment variables:
+copy from .env file
+PORT=5000
+JWT_SECRET="ecommerceapplication"
+MONGODB_URL="mongodb+srv://sivani:sivani@sivani.gl1dx.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Sivani"
+STRIPE_SECRET_KEY="sk_test_51MOH8zSB0s2EMORR2teTn6oEUFDXL7d0QB9pOZMMReYJ3jvzvhj4MLB2SLAelSW9U8ZdkAbngNUWqXhGIdD26cEG00y7bfkZda"
+Then click on Deploy service
+It will load, build and go to live
+
+After making any changes, u must do the below:
+git add .
+git commit -m "backend api updated"
+git push

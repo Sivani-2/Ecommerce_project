@@ -10,7 +10,16 @@ const productRoutes= require("./routes/productRoutes")
 const cartRoutes=require("./routes/cartRoutes")
 const paymentRoutes=require('./routes/paymentRoutes')
 
-app.use(cors())
+const corsOptions = {
+    origin: "https://ecommerce-project-1-3001.onrender.com", // Allow frontend domain
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Allow cookies/auth headers
+    allowedHeaders: ["Content-Type", "Authorization"], // Explicitly allow Authorization header
+    optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions)); // Use CORS middleware
+
 app.use(express.urlencoded({
     extended:true
 }))
